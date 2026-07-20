@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.tryduplo.com/en/atlas/guides/auth
+docs: https://docs.tryduplo.com/en/atlas/api-content/authentication
+api: Atlas Payments API
+summary:
+  types: [http]
+  http_scheme: bearer
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    Atlas authenticates every request with an API key presented as a Bearer token. A single
+    base host (https://atlas.tryduplo.com) serves both environments; whether a request runs in
+    test or live mode is determined by which key is used. Test and live keys are issued
+    separately in the Atlas dashboard. Additional hardening: optional IP whitelisting and
+    AES-256-GCM request payload encryption with a per-account encryption key.
+schemes:
+  - name: BearerApiKey
+    type: http
+    scheme: bearer
+    in: header
+    header: Authorization
+    format: 'Bearer <YOUR_API_KEY>'
+    modes:
+      - test    # test-mode keys; do not touch live balances or banking networks
+      - live    # production keys
+    sources: [https://docs.tryduplo.com/en/atlas/guides/auth]
+extras:
+  ip_whitelisting:
+    supported: true
+    docs: https://docs.tryduplo.com/en/atlas/guides/ip
+  payload_encryption:
+    supported: true
+    algorithm: AES-256-GCM
+    docs: https://docs.tryduplo.com/en/atlas/guides/encryption
