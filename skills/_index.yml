@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: generated
+source: https://docs.tryduplo.com/en/atlas
+api: Atlas Payments API
+note: >-
+  Agent Skills generated from the Atlas API reference. Every operation id is taken verbatim
+  from the documented Atlas endpoint surface (docs.tryduplo.com/en/atlas/...). Auth, error,
+  and webhook rules come from authentication/, errors/, and asyncapi/ in this repo.
+skills:
+  - file: duplo-collect-payment-checkout.md
+    name: Collect a payment with Atlas Checkout
+    api: Atlas Payments API
+    operations: [checkoutInitiate, checkoutVerifyByReference, getCheckoutTransactionsBySourceReference]
+  - file: duplo-virtual-account-collection.md
+    name: Create a customer with a virtual account and reconcile inflows
+    api: Atlas Payments API
+    operations: [createNewCustomer, findCustomerByReference, getTransactions]
+  - file: duplo-bank-payout.md
+    name: Send a bank payout
+    api: Atlas Payments API
+    operations: [bankList, nameEnquiry, createPayoutBankTransfer, getPayoutByReference]
+  - file: duplo-fx-swap.md
+    name: Swap between currency pairs
+    api: Atlas Payments API
+    operations: [getExchangeRates, initiateFxSwap, getFxWalletBalances]
+  - file: duplo-einvoice.md
+    name: Issue an NRS-compliant e-invoice
+    api: Atlas Payments API
+    operations: [onboardTaxpayer, createEInvoice, signEInvoice, validateEInvoice, confirmEInvoice]

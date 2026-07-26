@@ -1,7 +1,31 @@
 aid: duplo
 name: Duplo
-description: Duplo is a company surfaced as a portfolio company of point-nine and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Duplo is a fintech company building the financial operating system for African and
+  emerging-market businesses, headquartered in Lagos, Nigeria with operations in South Africa.
+  Its platform unifies B2B payments and spend management: automated expense tracking with
+  approval workflows, local and international (cross-border) payments, multi-currency global
+  business accounts, NRS-compliant e-invoicing, direct debit, tax management, auto
+  reconciliation, bulk payments to up to 500 recipients, and real-time financial reporting.
+  For developers, Duplo exposes Atlas, a global payments API (base host atlas.tryduplo.com)
+  covering collections/checkout, disbursements and bulk payouts, virtual accounts, payment
+  links, exchange rates and FX swaps, wallet management, and e-invoicing, authenticated with
+  Bearer API keys and delivering event notifications via webhooks. Duplo maintains PCI DSS,
+  ISO 27001 and ISO 22301 certifications, is NDPR compliant, and operates under Central Bank
+  of Nigeria oversight as a licensed Payment Service Solution Provider (PSSP).
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://tryduplo.com/wp-content/uploads/2026/04/Dashboard-1-01-scaled.webp
 url: https://raw.githubusercontent.com/api-evangelist/duplo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +35,108 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- FinTech
+- Payments
+- B2B Payments
+- Cross-Border Payments
+- Expense Management
+- Virtual Accounts
+- E-Invoicing
+- Foreign Exchange
+- Africa
+- Nigeria
+apis:
+- name: Atlas Payments API
+  description: >-
+    Atlas is Duplo's global payments API for African and emerging-market businesses: collect
+    payments (checkout, payment links, virtual accounts), disburse funds (single and bulk bank
+    payouts, international transfers), run exchange-rate lookups and FX swaps, manage wallets,
+    and issue NRS e-invoices. Authenticated with Bearer API keys, with test and live modes
+    selected by the key, and webhook event notifications.
+  humanURL: https://docs.tryduplo.com/en/atlas
+  baseURL: https://atlas.tryduplo.com
+  tags:
+  - Payments
+  - Collections
+  - Disbursements
+  - FX
+  - E-Invoicing
+  properties:
+  - type: Documentation
+    url: https://docs.tryduplo.com/en/atlas
+  - type: APIReference
+    url: https://docs.tryduplo.com/en/atlas/overview
+  - type: GettingStarted
+    url: https://docs.tryduplo.com/en/atlas/guides
+  - type: Authentication
+    url: authentication/duplo-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/duplo-domain-security.yml
 - type: Website
   url: https://tryduplo.com
+- type: DeveloperPortal
+  url: https://docs.tryduplo.com
+- type: Documentation
+  url: https://docs.tryduplo.com/en/atlas
+- type: APIReference
+  url: https://docs.tryduplo.com/en/atlas/overview
+- type: GettingStarted
+  url: https://docs.tryduplo.com/en/atlas/guides
+- type: Blog
+  url: https://tryduplo.com/blog
+- type: Support
+  url: https://duplo.zohodesk.com
+- type: StatusPage
+  url: https://status.tryduplo.com
+- type: Pricing
+  url: https://tryduplo.com/pricing
+- type: SignUp
+  url: https://dashboard.tryduplo.com
+- type: Login
+  url: https://dashboard.tryduplo.com
+- type: TermsOfService
+  url: https://tryduplo.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://tryduplo.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/tryduplo
+- type: ChangeLog
+  url: https://docs.tryduplo.com/en/atlas/changelogs
+- type: Compliance
+  url: conformance/duplo-conformance.yml
+- type: Authentication
+  url: authentication/duplo-authentication.yml
+- type: Conventions
+  url: conventions/duplo-conventions.yml
+- type: Sandbox
+  url: sandbox/duplo-sandbox.yml
+- type: Lifecycle
+  url: lifecycle/duplo-lifecycle.yml
+- type: Conformance
+  url: conformance/duplo-conformance.yml
+- type: Webhooks
+  url: asyncapi/duplo-atlas-webhooks.yml
+- type: MCPServer
+  url: mcp/duplo-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/duplo-data-model.yml
+- type: ErrorCatalog
+  url: errors/duplo-problem-types.yml
+- type: LLMsTxt
+  url: llms/duplo-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

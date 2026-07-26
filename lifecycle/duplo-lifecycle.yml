@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.tryduplo.com/en/atlas/changelogs
+api: Atlas Payments API
+versioning:
+  scheme: semver
+  current: 1.0.0
+  changelog: https://docs.tryduplo.com/en/atlas/changelogs
+status_page: https://status.tryduplo.com
+sla:
+  url: null
+  uptime_target: null
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support is documented as of capture.
+deprecated_operations: []

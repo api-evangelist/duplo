@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.tryduplo.com/en/atlas/guides/errors
+api: Atlas Payments API
+format: custom
+envelope:
+  fields:
+    requestId: string        # correlation id for the request (tracing/support)
+    requestTimestamp: string
+    message: string          # human-readable error message
+    errors: object           # field-level / contextual error detail
+    statusCode: integer      # mirrors the HTTP status
+problems:
+  - status: 400
+    title: Bad Request
+    meaning: Malformed JSON, missing required fields, or invalid data types.
+  - status: 401
+    title: Unauthorized
+    meaning: Authentication failure; invalid or missing API key.
+  - status: 404
+    title: Not Found
+    meaning: Resource does not exist or is not accessible.
+  - status: 410
+    title: Gone
+    meaning: Resource has been permanently removed.
+  - status: 422
+    title: Unprocessable Entity
+    meaning: Request is syntactically valid but one or more fields failed validation.
+  - status: 500
+    title: Internal Server Error
+    meaning: Server-side error.
+  - status: 502
+    title: Bad Gateway
+    meaning: Server-side error.
+  - status: 503
+    title: Service Unavailable
+    meaning: Server-side error.
+  - status: 504
+    title: Gateway Timeout
+    meaning: Server-side error.
+notes: >-
+  Atlas does not publish an application-specific error-code taxonomy beyond HTTP status codes;
+  contextual detail is returned in the `errors` object. Card disputes/chargebacks are handled
+  operationally (see https://docs.tryduplo.com/en/atlas/guides/chargebacks) rather than via
+  decline codes.

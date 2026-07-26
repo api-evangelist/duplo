@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.tryduplo.com/en/atlas
+api: Atlas Payments API
+authentication:
+  style: bearer-api-key
+  header: Authorization
+  detail: authentication/duplo-authentication.yml
+references:
+  # Atlas is reference-oriented rather than idempotency-key based. Clients supply their own
+  # source reference on create operations; that reference is used to look up, verify, and
+  # de-duplicate transactions (including confirming webhook authenticity).
+  client_supplied: true
+  field: sourceReference
+  used_for: [lookup, verification, webhook-authentication, duplicate-detection]
+  atlas_reference_field: reference
+  note: >-
+    No dedicated Idempotency-Key header is documented; duplicate protection is achieved by
+    reusing the client sourceReference and querying the transaction API before acting.
+request_tracing:
+  request_id_field: requestId
+  location: error/response envelope
+  also: requestTimestamp
+error_envelope:
+  format: custom
+  fields: [requestId, requestTimestamp, message, errors, statusCode]
+  detail: errors/duplo-problem-types.yml
+pagination:
+  documented: true
+  note: List endpoints (transactions, payouts, customers, payment links, e-invoices) support
+    listing/history retrieval; exact query parameters are documented per endpoint.
+webhooks:
+  supported: true
+  detail: asyncapi/duplo-atlas-webhooks.yml
+  verification: reference-lookup
+  duplicate_handling: >-
+    Webhooks may be delivered more than once; consumers must handle duplicate events
+    idempotently by keying on the transaction reference.
+security_controls:
+  ip_whitelisting: https://docs.tryduplo.com/en/atlas/guides/ip
+  payload_encryption:
+    algorithm: AES-256-GCM
+    docs: https://docs.tryduplo.com/en/atlas/guides/encryption
+versioning:
+  detail: lifecycle/duplo-lifecycle.yml

@@ -1,0 +1,101 @@
+# Duplo Documentation
+
+> Duplo provides global payments infrastructure for African and emerging-market businesses, enabling them to collect and settle in multiple currencies.
+
+## Atlas
+
+- [Getting Started](https://docs.tryduplo.com/en/atlas): An overview of Atlas
+- [Atlas API Overview](https://docs.tryduplo.com/en/atlas/overview): Quick reference for all Atlas API endpoints organized by category
+- [Authentication](https://docs.tryduplo.com/en/atlas/api-content/authentication): Atlas uses API keys for request authentication. Learn how to create an account, obtain your keys, and authenticate API requests using Bearer token authorization.
+- [Atlas Changelog](https://docs.tryduplo.com/en/atlas/changelogs): Product updates and announcements
+- [Authentication](https://docs.tryduplo.com/en/atlas/guides/auth): How to create an Atlas account, retrieve your API keys, and authenticate API requests.
+- [Compliance and Verification](https://docs.tryduplo.com/en/atlas/guides/compliance): Submit compliance documents required to verify your Atlas business account.
+- [Getting Started](https://docs.tryduplo.com/en/atlas/guides): Atlas is a global payments infrastructure for African and emerging-market businesses. Learn how to collect payments, disburse funds, create virtual accounts, and integrate Atlas into your application.
+- [Reports](https://docs.tryduplo.com/en/atlas/guides/reports): View and export transaction reports from your Atlas business account.
+- [Settlements](https://docs.tryduplo.com/en/atlas/guides/settlements): Understand how Atlas settles transactions to your business bank account.
+- [SDKs](https://docs.tryduplo.com/en/atlas/tutorials): Explore Duplo's SDKs
+- [List Banks By Currency](https://docs.tryduplo.com/en/atlas/banking/bankList)
+- [Run Bulk Account Name Enquiry](https://docs.tryduplo.com/en/atlas/banking/bulkNameEnquiry)
+- [Run Account Name Enquiry](https://docs.tryduplo.com/en/atlas/banking/nameEnquiry)
+- [Initiate Checkout Payment](https://docs.tryduplo.com/en/atlas/checkout/checkoutInitiate)
+- [Get Checkout Transactions By Reference](https://docs.tryduplo.com/en/atlas/checkout/checkoutTransactionsByReference)
+- [Verify Checkout By Reference](https://docs.tryduplo.com/en/atlas/checkout/checkoutVerifyByReference)
+- [Verify Checkout By Source Reference](https://docs.tryduplo.com/en/atlas/checkout/checkoutVerifyBySourceReference)
+- [Get Checkout Transactions By Source Reference](https://docs.tryduplo.com/en/atlas/checkout/getCheckoutTransactionsBySourceReference)
+- [Activate Customer](https://docs.tryduplo.com/en/atlas/customers/activateCustomerByReference)
+- [Blacklist Customer](https://docs.tryduplo.com/en/atlas/customers/blacklistCustomerByReference)
+- [Create Customer](https://docs.tryduplo.com/en/atlas/customers/createNewCustomer)
+- [Get Customer By Reference](https://docs.tryduplo.com/en/atlas/customers/findCustomerByReference)
+- [List Business Customers](https://docs.tryduplo.com/en/atlas/customers/getCustomerList)
+- [Update Customer By Reference](https://docs.tryduplo.com/en/atlas/customers/updateCustomerByReference)
+- [Confirm E-Invoice](https://docs.tryduplo.com/en/atlas/e-invoicing/confirmEInvoice)
+- [Create E-Invoice](https://docs.tryduplo.com/en/atlas/e-invoicing/createEInvoice)
+- [Create E-Invoicing Customer](https://docs.tryduplo.com/en/atlas/e-invoicing/createEInvoiceCustomer)
+- [Customize Invoice Logo and Colors](https://docs.tryduplo.com/en/atlas/e-invoicing/customizeEInvoice)
+- [Get E-Invoice by Source Reference](https://docs.tryduplo.com/en/atlas/e-invoicing/getEInvoiceBySourceReference)
+- [Get E-Invoicing Customer](https://docs.tryduplo.com/en/atlas/e-invoicing/getEInvoiceCustomerByReference)
+- [Get E-Invoice Details](https://docs.tryduplo.com/en/atlas/e-invoicing/getEInvoiceDetail)
+- [Get NRS Resources](https://docs.tryduplo.com/en/atlas/e-invoicing/getEInvoiceResources)
+- [List E-Invoicing Customers](https://docs.tryduplo.com/en/atlas/e-invoicing/listEInvoiceCustomers)
+- [List E-Invoices](https://docs.tryduplo.com/en/atlas/e-invoicing/listEInvoices)
+- [Onboard Taxpayer](https://docs.tryduplo.com/en/atlas/e-invoicing/onboardTaxpayer)
+- [Sign E-Invoice](https://docs.tryduplo.com/en/atlas/e-invoicing/signEInvoice)
+- [Update E-Invoice](https://docs.tryduplo.com/en/atlas/e-invoicing/updateEInvoice)
+- [Update E-Invoicing Customer](https://docs.tryduplo.com/en/atlas/e-invoicing/updateEInvoiceCustomer)
+- [Update Invoice Payment Status](https://docs.tryduplo.com/en/atlas/e-invoicing/updateEInvoicePaymentStatus)
+- [Validate E-Invoice](https://docs.tryduplo.com/en/atlas/e-invoicing/validateEInvoice)
+- [Get Exchange Rates](https://docs.tryduplo.com/en/atlas/exchange-rate/getExchangeRates)
+- [Get FX Rates History](https://docs.tryduplo.com/en/atlas/fx-swap/getFxRatesHistory)
+- [Get FX Swap](https://docs.tryduplo.com/en/atlas/fx-swap/getFxSwap)
+- [Get FX Wallet Balances](https://docs.tryduplo.com/en/atlas/fx-swap/getFxWalletBalances)
+- [Initiate FX Swap](https://docs.tryduplo.com/en/atlas/fx-swap/initiateFxSwap)
+- [List FX Swaps](https://docs.tryduplo.com/en/atlas/fx-swap/listFxSwaps)
+- [Create Payment Link](https://docs.tryduplo.com/en/atlas/payment-links/createPaymentLink)
+- [Get Payment Link](https://docs.tryduplo.com/en/atlas/payment-links/getPaymentLinkByReference)
+- [Get Payment Link By Source Reference](https://docs.tryduplo.com/en/atlas/payment-links/getPaymentLinkBySourceReference)
+- [Get Payment Link Transactions](https://docs.tryduplo.com/en/atlas/payment-links/getPaymentLinkTransactionsByReference)
+- [Get Payment Link Transactions By Source Reference](https://docs.tryduplo.com/en/atlas/payment-links/getPaymentLinkTransactionsBySourceReference)
+- [List Payment Links](https://docs.tryduplo.com/en/atlas/payment-links/listPaymentLinks)
+- [Toggle Payment Link Status](https://docs.tryduplo.com/en/atlas/payment-links/togglePaymentLinkStatus)
+- [Initiate Bulk Bank Payout](https://docs.tryduplo.com/en/atlas/payouts/createBulkBankTransferPayout)
+- [Initiate Bank Payout](https://docs.tryduplo.com/en/atlas/payouts/createPayoutBankTransfer)
+- [Get Bulk Payout Status](https://docs.tryduplo.com/en/atlas/payouts/getBulkPayoutStatus)
+- [Get Bulk Payout Status By Source Reference](https://docs.tryduplo.com/en/atlas/payouts/getBulkPayoutStatusBySourceReference)
+- [Get Payout By Reference](https://docs.tryduplo.com/en/atlas/payouts/getPayoutByReference)
+- [Get Payout Transaction By Source Reference](https://docs.tryduplo.com/en/atlas/payouts/getPayoutTransactionBySourceReference)
+- [List All Payouts](https://docs.tryduplo.com/en/atlas/payouts/getPayouts)
+- [Initiate International Bank Transfer](https://docs.tryduplo.com/en/atlas/payouts/initiateInternationalBankTransfer)
+- [Get Transaction By Reference](https://docs.tryduplo.com/en/atlas/transactions/getTransactionByReference)
+- [List Business Transactions](https://docs.tryduplo.com/en/atlas/transactions/getTransactions)
+- [Get Wallet Balance](https://docs.tryduplo.com/en/atlas/wallet/businessWalletBalance)
+- [Fund Business Test Wallet](https://docs.tryduplo.com/en/atlas/wallet/fundWallet)
+- [Atlas Checkout](https://docs.tryduplo.com/en/atlas/guides/checkout): Create checkout URLs via the Atlas API to collect payments from customers, configure redirect URLs, and handle payment confirmation webhooks.
+- [Customers & Virtual Accounts](https://docs.tryduplo.com/en/atlas/guides/customers): Create customer records with dedicated virtual accounts via the Atlas API, update customer details, handle virtual account deposits via webhooks, and manage customer blacklisting.
+- [Payment Links](https://docs.tryduplo.com/en/atlas/guides/pay-links): Create and share payment links with Atlas to collect payments from customers
+- [Collect Payments with the UI](https://docs.tryduplo.com/en/atlas/guides/ui): Collect payments using the Atlas dashboard without code, including receiving deposits via virtual accounts and creating shareable payment links.
+- [Collection Workflow](https://docs.tryduplo.com/en/atlas/guides/workflow): Understand how inbound payments work on Atlas, including supported payment methods, fees, settlement, and how to verify payments.
+- [Exchange Rates](https://docs.tryduplo.com/en/atlas/guides/rates): Retrieve real-time exchange rates for currency pairs using the Atlas Exchange Rate API.
+- [Swapping between Currency Pairs](https://docs.tryduplo.com/en/atlas/guides/swaps): Learn how to convert funds between supported currency pairs using the Atlas Swaps API.
+- [Beneficiaries](https://docs.tryduplo.com/en/atlas/guides/beneficiaries): Save and manage frequently used payout recipients as beneficiaries on your Atlas account.
+- [Bulk Payout](https://docs.tryduplo.com/en/atlas/guides/bulk-payouts): Send payments to multiple recipients in a single batch using Atlas bulk payouts.
+- [International Bank Transfers](https://docs.tryduplo.com/en/atlas/guides/ibt): Send funds internationally from your Atlas account to a recipient's bank account using the International Bank Transfer API.
+- [Disbursement Workflow](https://docs.tryduplo.com/en/atlas/guides/payout-workflow): How outbound payments work on Atlas, covering the payout lifecycle from initiation through validation, processing, and settlement, including payout states (pending, success, failed) and transaction fees.
+- [Single Payout](https://docs.tryduplo.com/en/atlas/guides/single-payout): Initiate single bank transfer payouts from your Atlas account to a recipient's bank account using the Create Payout API endpoint.
+- [Encrypting Atlas Payloads](https://docs.tryduplo.com/en/atlas/guides/encryption): Encrypt API request payloads using AES-256-GCM with your encryption key for end-to-end security.
+- [Handling Atlas Errors](https://docs.tryduplo.com/en/atlas/guides/errors): Understand Atlas API error responses including HTTP status codes, error structure, and how to handle authentication, payload, resource, and server errors.
+- [IP Whitelisting](https://docs.tryduplo.com/en/atlas/guides/ip): Restrict Atlas API access to specific IP addresses by configuring IP whitelisting in your Atlas dashboard.
+- [Transactions in Test Mode](https://docs.tryduplo.com/en/atlas/guides/test-accounts): Fund your Atlas test wallet, initiate test payouts, and switch between test and live environments using the Atlas sandbox and test API keys.
+- [Configure and Verify Webhooks](https://docs.tryduplo.com/en/atlas/guides/webhooks): Set up webhook endpoints to receive real-time notifications from Atlas for inflow and outflow events, verify webhook origins, handle duplicate events, and process payout state transitions.
+- [Chargebacks](https://docs.tryduplo.com/en/atlas/guides/chargebacks): Learn how chargebacks work on Atlas, what triggers them, and how to respond to a dispute raised against a card transaction.
+- [E-Invoicing](https://docs.tryduplo.com/en/atlas/guides/invoice): Validate and digitally sign your invoices to stay compliant with the Nigeria Revenue Service (NRS)
+- [Card Settlements on Atlas](https://docs.tryduplo.com/en/atlas/guides/settlement): Understand how card settlements work on Atlas, including settlement timelines, batching, and how funds are credited to your Zenith business account.
+- [Create Virtual Accounts with Atlas](https://docs.tryduplo.com/en/atlas/guides/account): Step-by-step guide to creating a customer with a dedicated virtual account.
+- [How to Collect Payments with Atlas](https://docs.tryduplo.com/en/atlas/guides/collect-pay): Step-by-step guide to collecting payments by initiating a checkout session via the Atlas API, redirecting customers to the hosted checkout page, and confirming payments via webhooks.
+- [Atlas Go-Live Checklist](https://docs.tryduplo.com/en/atlas/guides/go-live): Pre-launch checklist for going live with Atlas covering account creation, compliance verification, webhook configuration, end-to-end encryption setup, and sandbox testing.
+- [How to Withdraw Money from Atlas](https://docs.tryduplo.com/en/atlas/guides/quick-payout): Step-by-step guide to sending a bank transfer payout from Atlas, including fetching bank codes, resolving account names, and initiating the transfer via the API.
+- [Chargebacks](https://docs.tryduplo.com/en/atlas/guides/ops/chargebacks): Learn how chargebacks work on Atlas, what triggers them, and how to respond to a dispute raised against a card transaction.
+- [Card Settlements on Atlas](https://docs.tryduplo.com/en/atlas/guides/ops/settlement): Understand how card settlements work on Atlas, including settlement timelines, batching, and how funds are credited to your account.
+
+## FIRS
+
+- [Test page](https://docs.tryduplo.com/en/firs): Test page for the FIRS documentation section.

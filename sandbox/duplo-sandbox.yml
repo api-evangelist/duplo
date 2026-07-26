@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.tryduplo.com/en/atlas/guides/test-accounts
+api: Atlas Payments API
+model:
+  separation: key-based
+  detail: >-
+    Atlas uses a single base host (https://atlas.tryduplo.com) for both environments. Test vs
+    live mode is selected by the API key used. Test-mode requests do not affect live balances
+    and do not interact with the banking networks. You can operate in test mode while your
+    compliance documents are under review, before going live.
+  base_url: https://atlas.tryduplo.com
+keys:
+  test: issued in the Atlas dashboard (test key)
+  live: issued in the Atlas dashboard (live key)
+test_tooling:
+  - name: Fund Business Test Wallet
+    operation: fundWallet
+    docs: https://docs.tryduplo.com/en/atlas/wallet/fundWallet
+    description: Credit your test wallet with funds so you can initiate test payouts and swaps.
+  - name: Test payouts
+    description: Initiate payouts against the funded test wallet without moving real money.
+    docs: https://docs.tryduplo.com/en/atlas/guides/test-accounts
+go_live:
+  checklist: https://docs.tryduplo.com/en/atlas/guides/go-live
+  covers: [account creation, compliance verification, webhook configuration, end-to-end encryption setup, sandbox testing]
+notes: >-
+  No fixed "magic" test card numbers or test bank accounts are published in the documentation;
+  the sandbox is exercised by funding the test wallet and running flows with a test key. Never
+  invent test values.

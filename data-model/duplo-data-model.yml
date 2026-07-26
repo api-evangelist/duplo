@@ -1,0 +1,59 @@
+generated: '2026-07-18'
+method: derived
+source: https://docs.tryduplo.com/en/atlas/overview
+api: Atlas Payments API
+note: >-
+  Entity graph derived from the documented Atlas API resource surface (docs index). Identity is
+  reference-based: most entities are addressed by a client sourceReference and/or an Atlas
+  reference rather than opaque ids.
+identity:
+  strategy: reference
+  fields: [reference, sourceReference]
+entities:
+  - name: Customer
+    resource: customers
+    description: A business customer record; may own a dedicated virtual account.
+  - name: VirtualAccount
+    resource: virtual-accounts
+    description: A dedicated bank account assigned to a customer for receiving inflows.
+  - name: Checkout
+    resource: checkout
+    description: A hosted checkout session for collecting a payment.
+  - name: PaymentLink
+    resource: payment-links
+    description: A shareable link that collects a payment.
+  - name: Transaction
+    resource: transactions
+    description: A record of an inflow or outflow processed on the account.
+  - name: Payout
+    resource: payouts
+    description: An outbound bank transfer (single, bulk, or international).
+  - name: Wallet
+    resource: wallet
+    description: The business balance held on Atlas (per currency).
+  - name: FxSwap
+    resource: fx-swap
+    description: A conversion between two supported currency pairs.
+  - name: EInvoice
+    resource: e-invoicing
+    description: An NRS-compliant electronic invoice.
+  - name: EInvoiceCustomer
+    resource: e-invoicing
+    description: A customer record used for e-invoicing.
+  - name: Beneficiary
+    resource: beneficiaries
+    description: A saved payout recipient.
+  - name: Bank
+    resource: banking
+    description: A bank reference (code/name) used to resolve accounts and route payouts.
+relationships:
+  - {from: Customer, type: has_many, to: VirtualAccount, via: reference}
+  - {from: Customer, type: has_many, to: Transaction, via: reference}
+  - {from: VirtualAccount, type: belongs_to, to: Customer, via: reference}
+  - {from: Checkout, type: has_many, to: Transaction, via: sourceReference}
+  - {from: PaymentLink, type: has_many, to: Transaction, via: reference}
+  - {from: Payout, type: belongs_to, to: Wallet, via: reference}
+  - {from: Payout, type: has_one, to: Beneficiary, via: beneficiary}
+  - {from: FxSwap, type: belongs_to, to: Wallet, via: reference}
+  - {from: EInvoice, type: belongs_to, to: EInvoiceCustomer, via: reference}
+  - {from: Payout, type: references, to: Bank, via: bankCode}

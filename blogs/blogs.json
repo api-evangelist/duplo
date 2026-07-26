@@ -1,0 +1,14 @@
+{
+  "repo": "duplo",
+  "feeds": [
+    {
+      "source": "https://docs.tryduplo.com/en/atlas/guides",
+      "feed_url": "https://docs.tryduplo.com/en/atlas/guides",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.tryduplo.com/en/atlas/changelogs
+api: Atlas Payments API
+scheme: semver
+current_version: 1.0.0
+entries:
+  - version: 1.0.0
+    date: '2025-12-16'
+    title: Atlas v1.0.0 — Initial Release
+    type: release
+    breaking: false
+    highlights:
+      - Inaugural public release of the Atlas global payments API.
+      - Covers collections/checkout, payment links, virtual accounts, disbursements and bulk
+        payouts, international transfers, exchange rates, FX swaps, wallet management, and NRS
+        e-invoicing.
+notes: >-
+  The live changelog at the source URL is the source of truth. As of capture, v1.0.0 (Initial
+  Release) is the only published entry.

@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://tryduplo.com
+api: Atlas Payments API
+standards:
+  - id: pci-dss
+    conforms: true
+    evidence: Duplo advertises PCI DSS compliance for payment security.
+  - id: iso-27001
+    conforms: true
+    evidence: ISO 27001 (information security) certification advertised.
+  - id: iso-22301
+    conforms: true
+    evidence: ISO 22301 (business continuity) certification advertised.
+  - id: ndpr
+    conforms: true
+    evidence: Nigeria Data Protection Regulation (NDPR) compliance advertised.
+  - id: cbn-pssp
+    conforms: true
+    evidence: Licensed Payment Service Solution Provider (PSSP) under Central Bank of Nigeria oversight.
+  - id: nrs-einvoicing
+    conforms: true
+    evidence: NRS-compliant e-invoicing (Nigeria Revenue Service); invoices are validated and digitally signed.
+  - id: oauth2
+    conforms: false
+    evidence: Atlas uses Bearer API keys, not OAuth 2.0.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Error responses use a custom envelope (requestId/message/errors/statusCode), not application/problem+json.
+compliance_program:
+  published: true
+  certifications: [PCI DSS, ISO 27001, ISO 22301, NDPR]
+  licensing: [CBN PSSP]
+  page: https://tryduplo.com

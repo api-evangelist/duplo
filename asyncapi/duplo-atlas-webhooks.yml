@@ -1,0 +1,52 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.tryduplo.com/en/atlas/guides/webhooks
+spec_type: Webhooks
+api: Atlas Payments API
+transport: https-post
+configuration:
+  where: Atlas dashboard -> Settings -> Developers -> Webhook URL
+  requirement: HTTPS endpoint
+envelope:
+  fields:
+    event_type: string   # the event name, e.g. CHECKOUT_COMPLETED
+    data: object         # event-specific payload (reference, amount, status, timestamps)
+verification:
+  method: reference-lookup
+  detail: >-
+    Atlas does not sign webhooks with a signature header. Consumers authenticate an event by
+    querying the Atlas transaction API using data.reference (inflow/payout events) or
+    data.sourceReference (checkout events); if a record is returned the event is genuine.
+    IP allowlisting is recommended as supplementary security. Events may be delivered more than
+    once — handle duplicates idempotently by keying on the reference.
+events:
+  - name: IN_FLOW_SUCCESS_EVENT
+    category: virtual-account
+    description: Inbound payment (deposit) into a customer virtual account succeeded.
+  - name: CHECKOUT_PROCESSED
+    category: checkout
+    description: Inflow received; checkout not yet complete but you may fulfill at this stage.
+  - name: CHECKOUT_COMPLETED
+    category: checkout
+    description: Checkout fully completed with a successful transaction.
+  - name: CHECKOUT_FAILED
+    category: checkout
+    description: All transactions under the checkout failed with no successful payment.
+  - name: CHECKOUT_CANCELLED
+    category: checkout
+    description: Checkout terminated without a successful payment (abandonment, inactivity, manual cancellation, or risk rules).
+  - name: FX_SWAP_CREATED
+    category: fx
+    description: A foreign-exchange swap was created.
+  - name: FX_SWAP_COMPLETED
+    category: fx
+    description: A foreign-exchange swap completed.
+  - name: OUT_FLOW_PENDING_EVENT
+    category: payout
+    description: An outbound payout is pending.
+  - name: OUT_FLOW_SUCCESS_EVENT
+    category: payout
+    description: An outbound payout succeeded.
+  - name: OUT_FLOW_FAILED_EVENT
+    category: payout
+    description: An outbound payout failed.
