@@ -2,10 +2,9 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: https://docs.tryduplo.com/llms.txt
-note: >-
-  No official hosted/remote MCP server was found for Duplo/Atlas. This is a CANDIDATE tool
-  surface derived from the operations documented in the Atlas API reference (operationIds
-  taken verbatim from the docs index). It is a proposal, not a published server.
+note: No official hosted/remote MCP server was found for Duplo/Atlas. This is a CANDIDATE tool surface
+  derived from the operations documented in the Atlas API reference (operationIds taken verbatim from
+  the docs index). It is a proposal, not a published server.
 server:
   name: duplo-atlas
   transport: http
@@ -13,27 +12,81 @@ server:
 api: Atlas Payments API
 base_url: https://atlas.tryduplo.com
 tools:
-  - {name: list_banks, description: List banks by currency, source_operation: bankList}
-  - {name: resolve_account_name, description: Run account name enquiry, source_operation: nameEnquiry}
-  - {name: bulk_resolve_account_names, description: Run bulk account name enquiry, source_operation: bulkNameEnquiry}
-  - {name: initiate_checkout, description: Initiate a checkout payment, source_operation: checkoutInitiate}
-  - {name: verify_checkout, description: Verify a checkout by reference, source_operation: checkoutVerifyByReference}
-  - {name: create_customer, description: Create a customer (with dedicated virtual account), source_operation: createNewCustomer}
-  - {name: get_customer, description: Get a customer by reference, source_operation: findCustomerByReference}
-  - {name: list_customers, description: List business customers, source_operation: getCustomerList}
-  - {name: create_payment_link, description: Create a payment link, source_operation: createPaymentLink}
-  - {name: list_payment_links, description: List payment links, source_operation: listPaymentLinks}
-  - {name: get_exchange_rates, description: Get exchange rates for a currency pair, source_operation: getExchangeRates}
-  - {name: initiate_fx_swap, description: Initiate an FX swap, source_operation: initiateFxSwap}
-  - {name: get_fx_wallet_balances, description: Get FX wallet balances, source_operation: getFxWalletBalances}
-  - {name: create_payout, description: Initiate a single bank payout, source_operation: createPayoutBankTransfer}
-  - {name: create_bulk_payout, description: Initiate a bulk bank transfer payout, source_operation: createBulkBankTransferPayout}
-  - {name: get_payout, description: Get a payout by reference, source_operation: getPayoutByReference}
-  - {name: international_transfer, description: Initiate an international bank transfer, source_operation: initiateInternationalBankTransfer}
-  - {name: list_transactions, description: List business transactions, source_operation: getTransactions}
-  - {name: get_transaction, description: Get a transaction by reference, source_operation: getTransactionByReference}
-  - {name: get_wallet_balance, description: Get business wallet balance, source_operation: businessWalletBalance}
-  - {name: fund_test_wallet, description: Fund the business test wallet (test mode), source_operation: fundWallet}
-  - {name: create_einvoice, description: Create an NRS e-invoice, source_operation: createEInvoice}
-  - {name: sign_einvoice, description: Digitally sign an e-invoice, source_operation: signEInvoice}
-  - {name: validate_einvoice, description: Validate an e-invoice, source_operation: validateEInvoice}
+- name: list_banks
+  description: List banks by currency
+  source_operation: bankList
+- name: resolve_account_name
+  description: Run account name enquiry
+  source_operation: nameEnquiry
+- name: bulk_resolve_account_names
+  description: Run bulk account name enquiry
+  source_operation: bulkNameEnquiry
+- name: initiate_checkout
+  description: Initiate a checkout payment
+  source_operation: checkoutInitiate
+- name: verify_checkout
+  description: Verify a checkout by reference
+  source_operation: checkoutVerifyByReference
+- name: create_customer
+  description: Create a customer (with dedicated virtual account)
+  source_operation: createNewCustomer
+- name: get_customer
+  description: Get a customer by reference
+  source_operation: findCustomerByReference
+- name: list_customers
+  description: List business customers
+  source_operation: getCustomerList
+- name: create_payment_link
+  description: Create a payment link
+  source_operation: createPaymentLink
+- name: list_payment_links
+  description: List payment links
+  source_operation: listPaymentLinks
+- name: get_exchange_rates
+  description: Get exchange rates for a currency pair
+  source_operation: getExchangeRates
+- name: initiate_fx_swap
+  description: Initiate an FX swap
+  source_operation: initiateFxSwap
+- name: get_fx_wallet_balances
+  description: Get FX wallet balances
+  source_operation: getFxWalletBalances
+- name: create_payout
+  description: Initiate a single bank payout
+  source_operation: createPayoutBankTransfer
+- name: create_bulk_payout
+  description: Initiate a bulk bank transfer payout
+  source_operation: createBulkBankTransferPayout
+- name: get_payout
+  description: Get a payout by reference
+  source_operation: getPayoutByReference
+- name: international_transfer
+  description: Initiate an international bank transfer
+  source_operation: initiateInternationalBankTransfer
+- name: list_transactions
+  description: List business transactions
+  source_operation: getTransactions
+- name: get_transaction
+  description: Get a transaction by reference
+  source_operation: getTransactionByReference
+- name: get_wallet_balance
+  description: Get business wallet balance
+  source_operation: businessWalletBalance
+- name: fund_test_wallet
+  description: Fund the business test wallet (test mode)
+  source_operation: fundWallet
+- name: create_einvoice
+  description: Create an NRS e-invoice
+  source_operation: createEInvoice
+- name: sign_einvoice
+  description: Digitally sign an e-invoice
+  source_operation: signEInvoice
+- name: validate_einvoice
+  description: Validate an e-invoice
+  source_operation: validateEInvoice
+deployment:
+  mode: none
+  verified: derived
+  tools: 24
+  checked: '2026-08-12'
+  source: catalog MCP census
