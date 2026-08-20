@@ -38,6 +38,18 @@ created: '2026-07-17'
 modified: '2026-07-18'
 tags:
 - Company
+- Fintech
+- Payments
+- B2B Payments
+- Cross-Border Payments
+- Expense Management
+- Virtual Accounts
+- E-Invoicing
+- Foreign Exchange
+- Africa
+- Nigeria
+tags_raw:
+- Company
 - FinTech
 - Payments
 - B2B Payments
@@ -59,6 +71,12 @@ apis:
   humanURL: https://docs.tryduplo.com/en/atlas
   baseURL: https://atlas.tryduplo.com
   tags:
+  - Payments
+  - Collection
+  - Disbursements
+  - FX
+  - E-Invoicing
+  tags_raw:
   - Payments
   - Collections
   - Disbursements
