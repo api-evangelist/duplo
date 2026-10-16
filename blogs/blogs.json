@@ -2,6 +2,27 @@
   "repo": "duplo",
   "feeds": [
     {
+      "source": "https://tryduplo.com/news/",
+      "feed_url": "https://tryduplo.com/news/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://tryduplo.com/blog",
+      "feed_url": "https://tryduplo.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://tryduplo.com/feed/",
+      "feed_url": "https://tryduplo.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://docs.tryduplo.com/en/atlas/guides",
       "feed_url": "https://docs.tryduplo.com/en/atlas/guides",
       "title": "",
@@ -10,5 +31,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
