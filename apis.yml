@@ -87,7 +87,7 @@ apis:
   - Payments
   - Collection
   - Disbursements
-  - FX
+  - Foreign Exchange
   - E-Invoicing
   tags_raw:
   - Payments
